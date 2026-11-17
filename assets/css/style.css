@@ -1,0 +1,1769 @@
+:root {
+    font: 15px/1.55 Inter, system-ui, -apple-system,
+        "Segoe UI", Arial, sans-serif;
+
+    color: #24292f;
+    background: #f4f5f7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #40bae3;
+    outline-offset: 2px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0 2px 12px #0d365015;
+}
+
+.header-wrap {
+    max-width: 1120px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    padding: 9px 24px;
+    min-height: 85px;
+}
+
+.brand img {
+    width: 150px;
+    height: 67px;
+    object-fit: contain;
+}
+
+.desktop-tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.desktop-tabs a {
+    border-radius: 11px;
+    padding: 10px 14px;
+    font-weight: 700;
+    color: #657484;
+}
+
+.desktop-tabs a.active,
+.desktop-tabs a:hover {
+    background: #e6f6fd;
+    color: #003b70;
+}
+
+.account-head {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    color: #71808d;
+    font-size: 12px;
+}
+
+.account-head span {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.small-btn {
+    background: #003b70;
+    color: #ffffff;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-weight: 700;
+}
+
+.small-btn:hover {
+    background: #075c91;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+.main {
+    max-width: 1100px;
+    padding: 36px 24px 115px;
+    margin: auto;
+}
+
+.panel[hidden] {
+    display: none;
+}
+
+.heading {
+    margin-bottom: 25px;
+}
+
+.heading h1 {
+    font-size: 29px;
+    margin: 0 0 5px;
+    letter-spacing: -0.04em;
+}
+
+.heading p,
+.muted {
+    color: #687783;
+    margin: 0 0 20px;
+}
+
+/* =====================================
+   CARDS AND SERVICES
+===================================== */
+
+.card {
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #e6eaf0;
+    overflow: hidden;
+    box-shadow: 0 4px 14px #0b2c450a;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.service img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-inner {
+    padding: 23px;
+}
+
+.service h2,
+.blue-text {
+    color: #008dbb;
+    font-size: 21px;
+    margin: 0 0 9px;
+}
+
+.service p {
+    color: #61707f;
+    min-height: 55px;
+    margin: 0 0 19px;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.btn {
+    display: block;
+    width: 100%;
+    min-height: 52px;
+
+    padding: 11px 18px;
+
+    text-align: center;
+    font-size: 14px;
+    font-weight: 750;
+
+    border-radius: 12px;
+    border: 0;
+    margin-top: 14px;
+}
+
+.blue {
+    background: #008dbb;
+    color: #ffffff;
+}
+
+.dark {
+    background: #31343a;
+    color: #ffffff;
+}
+
+.outline {
+    border: 1px solid #9bb9c7;
+    color: #003b70;
+    background: #ffffff;
+}
+
+.btn:hover {
+    filter: brightness(0.95);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* =====================================
+   FORMS
+===================================== */
+
+.narrow {
+    max-width: 660px;
+}
+
+.padded {
+    padding: 23px;
+}
+
+.padded h2 {
+    margin: 0 0 10px;
+    font-size: 21px;
+}
+
+.padded label,
+#auth-form label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 17px 0 0;
+}
+
+.padded input,
+.padded select,
+#auth-form input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 53px;
+
+    margin: 7px 0 0;
+    padding: 0 14px;
+
+    border: 1px solid #adbac7;
+    border-radius: 11px;
+
+    background: #ffffff;
+    color: #232932;
+}
+
+.padded input:focus,
+.padded select:focus,
+#auth-form input:focus {
+    border-color: #008dbb;
+}
+
+.padded .muted {
+    margin: 0 0 12px;
+}
+
+.account-actions {
+    margin-top: 18px;
+}
+
+/* =====================================
+   CONTACT PAGE
+===================================== */
+
+.contacts {
+    display: grid;
+    gap: 15px;
+}
+
+.contact {
+    display: flex;
+    gap: 15px;
+    padding: 17px;
+    align-items: center;
+}
+
+.contact img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+}
+
+.contact div {
+    flex: 1;
+    min-width: 0;
+}
+
+.contact b {
+    font-size: 17px;
+}
+
+.contact p {
+    margin: 0;
+    color: #637482;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.contact span {
+    color: #008dbb;
+    font-size: 20px;
+}
+
+/* =====================================
+   FEEDBACK AND NOTICES
+===================================== */
+
+.feedback {
+    font-size: 13px;
+    color: #a14523;
+    white-space: pre-line;
+    margin: 12px 0 0;
+}
+
+.feedback:empty {
+    display: none;
+}
+
+.notice {
+    padding: 14px 17px;
+    background: #ecf8fe;
+    border: 1px solid #b8e4f8;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.inline-button,
+.text-button {
+    background: none;
+    border: none;
+    color: #008dbb;
+    font-weight: 750;
+    text-decoration: underline;
+    padding: 4px;
+}
+
+/* =====================================
+   BOOKING HISTORY
+===================================== */
+
+.history {
+    margin-top: 28px;
+}
+
+.history h2 {
+    font-size: 21px;
+    margin: 0 0 7px;
+}
+
+.history > p {
+    margin-bottom: 16px;
+}
+
+#booking-history-list {
+    display: grid;
+    gap: 14px;
+    margin-top: 15px;
+}
+
+.booking-history-card {
+    padding: 18px;
+}
+
+.booking-history-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.booking-history-header h3 {
+    font-size: 17px;
+    line-height: 1.3;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.booking-status {
+    display: inline-block;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 750;
+    padding: 7px 11px;
+    white-space: nowrap;
+}
+
+.status-pending {
+    background: #fff3d9;
+    color: #996300;
+}
+
+.status-approved {
+    background: #e4f4e8;
+    color: #217a3c;
+}
+
+.status-rejected {
+    background: #fce8e8;
+    color: #b42318;
+}
+
+.status-completed {
+    background: #e6eeff;
+    color: #2858b8;
+}
+
+.history-line {
+    font-size: 14px;
+    color: #59636f;
+    margin: 6px 0;
+    overflow-wrap: anywhere;
+}
+
+.history-line strong {
+    color: #24292f;
+}
+
+.booking-description {
+    font-size: 13px;
+    color: #68717d;
+    border-top: 1px solid #eaecef;
+    margin: 13px 0 0;
+    padding-top: 12px;
+}
+
+/* =====================================
+   MOBILE NAVIGATION
+===================================== */
+
+.bottom-nav {
+    position: fixed;
+    z-index: 6;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    bottom: calc(
+        13px + env(safe-area-inset-bottom, 0px)
+    );
+
+    display: flex;
+    align-items: center;
+
+    width: min(450px, calc(100% - 40px));
+    height: 78px;
+
+    border-radius: 27px;
+    overflow: hidden;
+    padding: 6px;
+
+    background: linear-gradient(
+        105deg,
+        #d5f6ff,
+        #86d8f2,
+        #1599d4
+    );
+
+    box-shadow: 0 7px 25px #12548135;
+}
+
+.bottom-nav a {
+    flex: 1;
+    height: 100%;
+
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 700;
+    color: #075b91;
+
+    border-radius: 18px;
+}
+
+.bottom-nav a.active {
+    background: #ffffff33;
+    color: #003b70;
+}
+
+.nav-icon {
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+/* =====================================
+   AUTHENTICATION DIALOG
+===================================== */
+
+dialog {
+    border: none;
+    border-radius: 21px;
+
+    width: min(440px, calc(100% - 28px));
+    max-height: calc(100dvh - 40px);
+
+    padding: 0;
+
+    box-shadow: 0 20px 70px #0b294b54;
+}
+
+dialog::backdrop {
+    background: #082640a6;
+}
+
+.modal {
+    padding: 23px;
+    overflow-y: auto;
+    max-height: calc(100dvh - 40px);
+    position: relative;
+}
+
+.modal-logo {
+    width: 142px;
+    height: 60px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.modal h2 {
+    text-align: center;
+    margin: 12px 0 5px;
+    font-size: 24px;
+}
+
+.modal > .muted {
+    text-align: center;
+    font-size: 13px;
+    margin: 0;
+}
+
+.modal .close {
+    position: absolute;
+    right: 14px;
+    top: 10px;
+
+    border: 0;
+    background: #ffffff;
+    font-size: 26px;
+}
+
+.modal .btn {
+    margin-top: 15px;
+}
+
+.modal #google-button {
+    margin-top: 12px;
+}
+
+.auth-switch {
+    font-size: 13px;
+    text-align: center;
+
+    margin-top: 15px;
+    color: #64717d;
+}
+
+#forgot-button {
+    display: block;
+    margin: 12px auto 0;
+}
+
+#auth-feedback {
+    font-size: 13px;
+}
+
+/* =====================================
+   DESKTOP
+===================================== */
+
+@media (min-width: 850px) {
+
+    .bottom-nav {
+        display: none;
+    }
+
+    .main {
+        padding-bottom: 70px;
+    }
+
+}
+
+/* =====================================
+   TABLET AND MOBILE
+===================================== */
+
+@media (max-width: 849px) {
+
+    .desktop-tabs {
+        display: none;
+    }
+
+    .header-wrap {
+        min-height: 79px;
+        padding: 5px 18px;
+        gap: 8px;
+    }
+
+    .brand img {
+        width: 130px;
+        height: 64px;
+    }
+
+    .account-head {
+        font-size: 11px;
+    }
+
+    .account-head span {
+        max-width: 90px;
+    }
+
+    .small-btn {
+        padding: 9px 11px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service img {
+        height: 200px;
+    }
+
+    .service p {
+        min-height: 0;
+    }
+
+    .main {
+        padding: 25px 17px
+            calc(
+                130px + env(safe-area-inset-bottom, 0px)
+            );
+    }
+
+    .heading h1 {
+        font-size: 25px;
+    }
+
+    .padded {
+        padding: 19px;
+    }
+
+}
+
+/* =====================================
+   SMALL MOBILE SCREENS
+===================================== */
+
+@media (max-width: 400px) {
+
+    .account-head span {
+        display: none;
+    }
+
+    .service img {
+        height: 175px;
+    }
+
+    .nav-icon {
+        font-size: 25px;
+    }
+
+    .bottom-nav {
+        height: 74px;
+    }
+
+    .booking-history-header {
+        align-items: flex-start;
+    }
+
+    .booking-history-header h3 {
+        font-size: 15px;
+    }
+
+/* ORIGINAL ANDROID NAVIGATION ICONS */
+
+.bottom-nav .nav-icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+.bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+
+
+
+
+
+
+}
+
+/* =====================================================
+   NYAMATSI HOLDINGS - COMPANY INFORMATION
+===================================================== */
+
+.nh-company-information {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 25px 16px 50px;
+    box-sizing: border-box;
+    color: var(--text-color, #263445);
+}
+
+.nh-company-information * {
+    box-sizing: border-box;
+}
+
+.nh-info-section {
+    width: 100%;
+    margin-bottom: 55px;
+    scroll-margin-top: 90px;
+}
+
+.nh-section-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 25px;
+}
+
+.nh-eyebrow {
+    display: inline-block;
+    color: #2875d4;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.nh-section-heading h2,
+.nh-social-card h2 {
+    font-size: clamp(25px, 4vw, 34px);
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0 0 12px;
+    color: var(--heading-color, #172d48);
+}
+
+.nh-section-heading p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted-color, #748195);
+    margin: 0;
+}
+
+
+/* ABOUT SECTION */
+
+.nh-about-card {
+    background: var(--card-background, #ffffff);
+    border: 1px solid var(--border-color, #e6ebf2);
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 22px;
+    box-shadow: 0 5px 20px rgba(20, 50, 90, 0.04);
+}
+
+.nh-about-card h3 {
+    font-size: 20px;
+    margin: 0 0 15px;
+    color: var(--heading-color, #172d48);
+}
+
+.nh-about-card p {
+    font-size: 14px;
+    line-height: 1.85;
+    margin: 0 0 13px;
+    color: var(--text-color, #526174);
+}
+
+.nh-about-card p:last-child {
+    margin-bottom: 0;
+}
+
+.nh-mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.nh-info-card {
+    background: var(--card-background, #ffffff);
+    border: 1px solid var(--border-color, #e6ebf2);
+    border-radius: 18px;
+    padding: 23px;
+    box-shadow: 0 5px 20px rgba(20, 50, 90, 0.04);
+}
+
+.nh-info-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.nh-info-card h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: var(--heading-color, #172d48);
+}
+
+.nh-info-card p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--muted-color, #748195);
+    margin: 0;
+}
+
+.nh-management-card {
+    background: linear-gradient(135deg, #edf5ff, #ffffff);
+    border-color: #dceaff;
+}
+
+
+/* SERVICE GRID */
+
+.nh-service-description {
+    background: var(--card-background, #ffffff);
+    border-left: 4px solid #2875d4;
+    border-radius: 10px;
+    padding: 17px 20px;
+    margin-bottom: 22px;
+}
+
+.nh-service-description p {
+    color: var(--muted-color, #65758a);
+    line-height: 1.8;
+    font-size: 14px;
+    margin: 0;
+}
+
+.nh-service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.nh-service-card {
+    background: var(--card-background, #ffffff);
+    border: 1px solid var(--border-color, #e6ebf2);
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nh-service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(30, 90, 160, 0.09);
+}
+
+.nh-service-card > span {
+    font-size: 27px;
+    display: inline-block;
+    margin-bottom: 13px;
+}
+
+.nh-service-card h3 {
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--heading-color, #172d48);
+}
+
+.nh-service-card p {
+    color: var(--muted-color, #748195);
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* PRODUCT GRID */
+
+.nh-products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.nh-product-card {
+    background: var(--card-background, #ffffff);
+    border: 1px solid var(--border-color, #e6ebf2);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(20, 50, 90, 0.04);
+}
+
+.nh-product-image {
+    width: 100%;
+    height: 190px;
+    background: #edf3fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.nh-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.nh-product-content {
+    padding: 22px;
+}
+
+.nh-product-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #2875d4;
+    background: #eaf3ff;
+    padding: 6px 9px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.nh-product-content h3 {
+    margin: 0 0 12px;
+    color: var(--heading-color, #172d48);
+    font-size: 19px;
+}
+
+.nh-product-content p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--muted-color, #748195);
+    margin: 0 0 12px;
+}
+
+.nh-product-content ul {
+    padding-left: 19px;
+    margin: 12px 0 0;
+}
+
+.nh-product-content li {
+    padding: 4px 0;
+    color: var(--muted-color, #748195);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.nh-product-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted-color, #748195);
+    margin-top: 23px;
+}
+
+
+/* SOCIAL RESPONSIBILITY */
+
+.nh-social-card {
+    padding: 35px 25px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #123f79, #2875d4);
+    color: #ffffff;
+    text-align: center;
+}
+
+.nh-social-card .nh-eyebrow {
+    color: #d8eaff;
+}
+
+.nh-social-card h2 {
+    color: #ffffff;
+}
+
+.nh-social-card p {
+    max-width: 750px;
+    margin: 13px auto;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #edf5ff;
+}
+
+.nh-bee-message {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* CONTACT INFORMATION */
+
+.nh-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.nh-contact-card {
+    display: block;
+    background: var(--card-background, #ffffff);
+    border: 1px solid var(--border-color, #e6ebf2);
+    border-radius: 15px;
+    padding: 22px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nh-contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(30, 90, 160, 0.08);
+}
+
+.nh-contact-card > span {
+    display: block;
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.nh-contact-card h3 {
+    font-size: 15px;
+    margin: 0 0 8px;
+    color: var(--heading-color, #172d48);
+}
+
+.nh-contact-card p {
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 0;
+    color: var(--muted-color, #748195);
+    overflow-wrap: anywhere;
+}
+
+.nh-contact-callout {
+    text-align: center;
+    background: var(--card-background, #ffffff);
+    border: 1px solid var(--border-color, #e6ebf2);
+    border-radius: 18px;
+    padding: 28px 20px;
+    margin-top: 22px;
+}
+
+.nh-contact-callout h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: var(--heading-color, #172d48);
+}
+
+.nh-contact-callout p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--muted-color, #748195);
+    margin: 0 0 18px;
+}
+
+.nh-contact-email-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #2875d4, #1455a2);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.nh-contact-email-button:hover {
+    opacity: 0.9;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 800px) {
+
+    .nh-service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .nh-contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .nh-company-information {
+        padding: 20px 12px 40px;
+    }
+
+    .nh-info-section {
+        margin-bottom: 40px;
+    }
+
+    .nh-mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nh-service-grid {
+        grid-template-columns: 1fr;
+        gap: 11px;
+    }
+
+    .nh-products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nh-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nh-about-card,
+    .nh-info-card {
+        padding: 19px;
+    }
+
+    .nh-service-card {
+        display: flex;
+        flex-direction: column;
+        padding: 17px;
+    }
+
+    .nh-product-image {
+        height: 170px;
+    }
+
+    .nh-social-card {
+        padding: 28px 18px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nh-service-card,
+    .nh-contact-card {
+        transition: none;
+    }
+
+}
+
+/* =========================================
+   NYAMATSI HOLDINGS WELCOME BANNER
+========================================= */
+
+.nh-welcome-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    padding: 45px 35px;
+    margin-bottom: 55px;
+    overflow: hidden;
+    border-radius: 22px;
+    background: linear-gradient(120deg, #103b70, #176ac0, #328de5);
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.nh-welcome-content {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.nh-welcome-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #d9eaff;
+    margin-bottom: 17px;
+}
+
+.nh-welcome-content h1 {
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.2;
+    font-weight: 850;
+    margin: 0 0 18px;
+    color: #ffffff;
+}
+
+.nh-welcome-content h1 span {
+    display: block;
+    color: #c5e2ff;
+}
+
+.nh-welcome-content > p {
+    max-width: 570px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #edf5ff;
+    margin: 0 0 25px;
+}
+
+.nh-welcome-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.nh-welcome-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 45px;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 750;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.nh-welcome-primary {
+    background: #ffffff;
+    color: #14549a !important;
+}
+
+.nh-welcome-primary:hover {
+    background: #eaf3ff;
+    transform: translateY(-2px);
+}
+
+.nh-welcome-primary span {
+    font-size: 19px;
+}
+
+.nh-welcome-secondary {
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.65);
+    background: rgba(255,255,255,0.08);
+}
+
+.nh-welcome-secondary:hover {
+    background: rgba(255,255,255,0.18);
+}
+
+.nh-welcome-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+}
+
+.nh-welcome-highlights div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nh-welcome-highlights strong {
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.nh-welcome-highlights span {
+    font-size: 11px;
+    color: #d5e8ff;
+}
+
+.nh-welcome-logo {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 220px;
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 22px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.96);
+}
+
+.nh-welcome-logo img {
+    max-width: 100%;
+    max-height: 125px;
+    object-fit: contain;
+}
+
+.nh-welcome-logo span {
+    text-align: center;
+    color: #14549a;
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 1.5px;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 700px) {
+
+    .nh-welcome-section {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        padding: 27px 20px;
+        gap: 25px;
+    }
+
+    .nh-welcome-logo {
+        flex: none;
+        width: 100%;
+        min-height: 130px;
+        padding: 15px;
+        border-radius: 14px;
+    }
+
+    .nh-welcome-logo img {
+        max-height: 90px;
+        max-width: 200px;
+    }
+
+    .nh-welcome-content h1 {
+        font-size: 32px;
+    }
+
+    .nh-welcome-content > p {
+        font-size: 13px;
+    }
+
+    .nh-welcome-buttons {
+        flex-direction: column;
+    }
+
+    .nh-welcome-buttons a {
+        width: 100%;
+    }
+
+    .nh-welcome-highlights {
+        gap: 18px;
+        justify-content: space-between;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .nh-welcome-highlights {
+        gap: 12px;
+    }
+
+    .nh-welcome-highlights strong {
+        font-size: 14px;
+    }
+
+    .nh-welcome-highlights span {
+        font-size: 10px;
+    }
+
+}
+
+
+
+
+/* EXPLORE SERVICES SCROLL POSITION */
+
+#nh-cleaning {
+    scroll-margin-top: 30px;
+}
+
+.nh-welcome-primary {
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+/* =====================================================
+   NYAMATSI HOLDINGS - FULL WIDTH WEBSITE HOME PAGE
+   Home page only. Other app sections remain unchanged.
+===================================================== */
+
+/* Give the home page the full available width */
+
+#home {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    overflow: visible;
+}
+
+/* Remove the narrow app-style content restriction */
+
+#home .narrow {
+    width: 100%;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(20px, 4vw, 65px);
+    padding-right: clamp(20px, 4vw, 65px);
+    box-sizing: border-box;
+}
+
+/* Main company information */
+
+#home .nh-company-information {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 30px 0 70px;
+    box-sizing: border-box;
+}
+
+/* Welcome banner */
+
+#home .nh-welcome-section {
+    width: 100%;
+    min-height: 380px;
+    margin: 0 auto 65px;
+    padding: clamp(35px, 5vw, 70px);
+    border-radius: 22px;
+    gap: 50px;
+}
+
+#home .nh-welcome-content {
+    max-width: 850px;
+}
+
+#home .nh-welcome-content h1 {
+    font-size: clamp(38px, 4.5vw, 64px);
+    max-width: 750px;
+}
+
+#home .nh-welcome-content > p {
+    max-width: 650px;
+    font-size: 15px;
+}
+
+#home .nh-welcome-logo {
+    flex-basis: 260px;
+    min-height: 250px;
+}
+
+#home .nh-welcome-logo img {
+    max-height: 160px;
+}
+
+/* Give each section more breathing room */
+
+#home .nh-info-section {
+    width: 100%;
+    margin-bottom: 85px;
+    scroll-margin-top: 35px;
+}
+
+/* Section headings */
+
+#home .nh-section-heading {
+    max-width: 850px;
+    margin: 0 auto 40px;
+}
+
+#home .nh-section-heading h2,
+#home .nh-social-card h2 {
+    font-size: clamp(30px, 3vw, 42px);
+}
+
+#home .nh-section-heading p {
+    font-size: 15px;
+}
+
+/* About section */
+
+#home .nh-about-card {
+    padding: clamp(25px, 3vw, 45px);
+    border-radius: 20px;
+}
+
+#home .nh-about-card p {
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 1200px;
+}
+
+#home .nh-about-card h3 {
+    font-size: 23px;
+}
+
+#home .nh-mission-grid {
+    gap: 25px;
+}
+
+#home .nh-info-card {
+    padding: 32px;
+    border-radius: 20px;
+}
+
+#home .nh-info-card p {
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Services - more cards across the screen */
+
+#home .nh-service-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+#home .nh-service-card {
+    padding: 27px;
+    min-height: 185px;
+    border-radius: 18px;
+}
+
+#home .nh-service-card > span {
+    font-size: 32px;
+}
+
+#home .nh-service-card h3 {
+    font-size: 17px;
+}
+
+#home .nh-service-card p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Service descriptions */
+
+#home .nh-service-description {
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    border-radius: 13px;
+}
+
+#home .nh-service-description p {
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* Products */
+
+#home .nh-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+#home .nh-product-card {
+    border-radius: 20px;
+}
+
+#home .nh-product-image {
+    height: 250px;
+}
+
+#home .nh-product-content {
+    padding: 30px;
+}
+
+#home .nh-product-content h3 {
+    font-size: 22px;
+}
+
+#home .nh-product-content p {
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+#home .nh-product-content li {
+    font-size: 13px;
+}
+
+/* Social responsibility */
+
+#home .nh-social-card {
+    padding: 60px 35px;
+    border-radius: 22px;
+}
+
+#home .nh-social-card p {
+    font-size: 15px;
+    line-height: 2;
+}
+
+/* Contact cards */
+
+#home .nh-contact-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+#home .nh-contact-card {
+    padding: 32px 22px;
+    border-radius: 18px;
+}
+
+#home .nh-contact-card h3 {
+    font-size: 17px;
+}
+
+#home .nh-contact-card p {
+    font-size: 14px;
+}
+
+#home .nh-contact-callout {
+    padding: 45px 30px;
+    border-radius: 20px;
+}
+
+/* =====================================================
+   LAPTOPS AND SMALLER DESKTOP SCREENS
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    #home .nh-service-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #home .nh-contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* =====================================================
+   TABLETS
+===================================================== */
+
+@media (max-width: 800px) {
+
+    #home .narrow {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #home .nh-service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #home .nh-products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #home .nh-welcome-section {
+        gap: 25px;
+        min-height: 320px;
+    }
+
+}
+
+/* =====================================================
+   MOBILE PHONES
+===================================================== */
+
+@media (max-width: 560px) {
+
+    #home .narrow {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    #home .nh-company-information {
+        padding-top: 15px;
+    }
+
+    #home .nh-info-section {
+        margin-bottom: 45px;
+    }
+
+    #home .nh-welcome-section {
+        flex-direction: column-reverse;
+        padding: 25px 18px;
+        min-height: auto;
+        margin-bottom: 45px;
+    }
+
+    #home .nh-welcome-content h1 {
+        font-size: 34px;
+    }
+
+    #home .nh-service-grid,
+    #home .nh-products-grid,
+    #home .nh-contact-grid,
+    #home .nh-mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #home .nh-service-card {
+        min-height: auto;
+    }
+
+    #home .nh-product-image {
+        height: 190px;
+    }
+
+    #home .nh-about-card,
+    #home .nh-info-card {
+        padding: 20px;
+    }
+
+    #home .nh-social-card {
+        padding: 30px 20px;
+    }
+
+}
